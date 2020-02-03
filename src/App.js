@@ -1,25 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Mapper from "./components/map/Map"
 
 function App() {
+
+  const mapArray = [
+    {
+      id: 1,
+      name: "Nashville",
+      lat: 36.170081,
+      lng: -86.787324
+    },
+    {
+      id: 2,
+      name: "South Nashville",
+      lat: 36.137647,
+      lng: -86.733079
+    }
+  ]
+
   return (
+    <>
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="mapWrapper">
+        <Mapper props={mapArray}/>
+      </div>
     </div>
+    </>
   );
 }
 
