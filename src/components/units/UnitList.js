@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import UnitCard from "./UnitCard"
 // import BuildingManager from "../../modules/BuildingManager";
 
 class UnitList extends Component {
@@ -11,14 +12,11 @@ class UnitList extends Component {
     render() {
 
         return(
+            <>
+            <h3>Unit List</h3>
+            <UnitCard {...this.props}/>
+            </>
 
-            <div className="card">
-                <div className="card-content">
-                    <h3 className="card-header">Unit List</h3>
-                    <button type="button" className="btn    btn-primary">See Details
-                    </button>
-                </div>
-            </div>
         )
     }
 }
