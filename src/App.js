@@ -1,4 +1,8 @@
-import React from 'react';
+import React, { Component } from "react";
+import ApplicationViews from "../src/components/ApplicationViews";
+import NavBar from "./components/nav/NavBar";
+import Login from "./components/auth/Login";
+import Register from "./components/auth/Register";
 import './App.css';
 import Mapper from "./components/map/Map"
 
@@ -23,9 +27,8 @@ function App() {
     <>
 
     <div className="App">
-      <div className="mapWrapper">
-        <Mapper props={mapArray}/>
-      </div>
+      <NavBar/>
+      <ApplicationViews/>
     </div>
     </>
   );

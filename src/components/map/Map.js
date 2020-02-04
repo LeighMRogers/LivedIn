@@ -22,7 +22,7 @@ export default class Mapper extends Component {
 			>
 				<TileLayer
 					attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-					url={"http://{s}.tile.osm.org/{z}/{x}/{y}.png"}
+					url={"https://api.mapbox.com/styles/v1/leighmrogers/ck60ygd6a06px1ithkcase8tr/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibGVpZ2htcm9nZXJzIiwiYSI6ImNrNjB5ZGJnaTAwOXozZHBwYXhweHM1ZTIifQ.zC19ZazyEY4xiAb-ANz-Xg"}
 				/>
 				{/* <MarkerClusterGroup> */}
 					{this.props.props.map(location => (
