@@ -37,7 +37,6 @@ class Login extends Component {
                     user.name.toLowerCase() === this.state.name.toLowerCase()) {
                     return user;
                     }
-
                 }
             );
             if (this.state.name === "") {
