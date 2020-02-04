@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 // import BuildingManager from "../../modules/BuildingManager";
 // import BuildingCard from "./BuildingCard";
 import Mapper from "../map/Map"

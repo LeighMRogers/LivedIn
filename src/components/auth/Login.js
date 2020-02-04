@@ -5,18 +5,18 @@ import { Form } from 'reactstrap'
 class Login extends Component {
 	// Set initial state
 	state = {
-		userName: '',
-		password: '',
-        hideReg: true
+		name: '',
+		email: '',
+        // hideReg: true
 	};
 
-	showLogin = () => {
-		this.setState({ hideReg: false });
-	};
+	// showLogin = () => {
+	// 	this.setState({ hideReg: false });
+	// };
 
-	hideReg = () => {
-		this.setState({ hideReg: true });
-	};
+	// hideReg = () => {
+	// 	this.setState({ hideReg: true });
+	// };
 
 	// Update state whenever an input field is edited
 	handleFieldChange = evt => {
@@ -29,16 +29,20 @@ class Login extends Component {
 	handleLogin = (e) => {
         console.log("login button has been clicked")
         e.preventDefault()
-        AuthManager.getUserData("users").then((users) => {
-            let singleUser = users.find(
-                user =>
-                    user.password.toLowerCase() === this.state.password.toLowerCase() &&
-                    user.userName.toLowerCase() === this.state.userName.toLowerCase()
+        AuthManager.getUserData("users").then((user) => {
+            let singleUser = user.find(
+                user => {
+                    console.log("user data", user.email, user.name)
+                    if (user.email.toLowerCase() === this.state.email.toLowerCase() &&
+                    user.name.toLowerCase() === this.state.name.toLowerCase()) {
+                    return user;
+                    }
+
+                }
             );
-            console.log(singleUser);
-            if (this.state.userName === "") {
+            if (this.state.name === "") {
                 window.alert("Please enter user name")
-            } else if (this.state.password === "") {
+            } else if (this.state.email === "") {
                 window.alert("Please enter password")
             } else if (singleUser) {
                 this.props.setUser(singleUser);
@@ -61,16 +65,16 @@ class Login extends Component {
                             className="form-control"
                             required=""
                             autoFocus=""
-                            placeholder="User name"
-                            name="username"
-                            id="userName"/>
+                            placeholder="Name"
+                            name="name"
+                            id="name"/>
                         <input onChange={this.handleFieldChange}
                             className="form-control"
-                            type="password"
+                            type="email"
                             required=""
-                            name="password"
-                            id="password"
-                            placeholder="Password" />
+                            name="email"
+                            id="email"
+                            placeholder="email" />
                         <button className="btn btn-primary" type="submit">Log In</button>
                     </Form>
                 </div>

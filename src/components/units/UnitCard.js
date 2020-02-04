@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import UnitList from "./UnitList"
 // import BuildingManager from "../../modules/BuildingManager";
 
 class UnitCard extends Component {

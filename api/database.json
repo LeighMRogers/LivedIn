@@ -1,0 +1,51 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "steve",
+        "password": "pass",
+        "email": "steve@email.com",
+        "landlord": false
+      },
+      {
+        "id": 2,
+        "name": "Randy",
+        "password": "pass",
+        "email": "randy@email.com",
+        "landlord": true
+      }
+    ],
+    "buildings": [
+      {
+        "id": 1,
+        "name": "Germantown Flats",
+        "address": "100 Rosa Parks Ave"
+      }
+    ],
+    "units": [
+      {
+        "id": 23,
+        "name": "1A",
+        "buildingId": 1
+      }
+    ],
+    "reviews": [
+      {
+        "id": 1,
+        "name": "Nice place",
+        "date": "12-24-2019",
+        "description": "It was great",
+        "rating": 5,
+        "recommendation": true,
+        "unitId": 1,
+        "userId": 1
+      }
+    ],
+    "buildingLandlords": [
+      {
+        "id": 1,
+        "userId": 2,
+        "buildingId": 1
+      }
+    ]
+  }
