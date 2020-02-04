@@ -7,16 +7,16 @@ class Login extends Component {
 	state = {
 		userName: '',
 		password: '',
-        // hideReg: true
+        hideReg: true
 	};
 
-	// showLogin = () => {
-	// 	this.setState({ hideReg: false });
-	// };
+	showLogin = () => {
+		this.setState({ hideReg: false });
+	};
 
-	// hideReg = () => {
-	// 	this.setState({ hideReg: true });
-	// };
+	hideReg = () => {
+		this.setState({ hideReg: true });
+	};
 
 	// Update state whenever an input field is edited
 	handleFieldChange = evt => {
