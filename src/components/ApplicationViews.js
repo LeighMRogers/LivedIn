@@ -18,7 +18,7 @@ export default class ApplicationViews extends Component {
 
             {/* login route */}
             <Route path="/login" render={props => {
-            return <Login  {...props} />
+            return <Login  {...props} setUser={this.props.setUser} />
             }} />
 
             {/* register route */}

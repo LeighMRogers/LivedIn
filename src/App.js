@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import NavBar from "./components/nav/NavBar";
 import ApplicationViews from "./components/ApplicationViews";
-import Login from './components/auth/Login';
-import './components/App.css';
+import './App.css';
 class App extends Component {
 	state = {
 		user: sessionStorage.getItem('activeUser') !== null,
@@ -10,7 +9,8 @@ class App extends Component {
 		landlord: ''
 	};
 
-	isAuthenticated = () => sessionStorage.getItem('activeUser') !== null;
+  isAuthenticated = () => sessionStorage.getItem('activeUser') !== null;
+
 	setUser = id => {
 		sessionStorage.setItem('activeUser', id);
 		this.setState({ activeUser: this.getUser(), user: true });
@@ -40,7 +40,6 @@ class App extends Component {
 	render() {
 		return (
 			<div className='App'>
-        <div className="App">
         <NavBar
             clearUser={this.clearUser}
             user={this.state.user}
@@ -51,12 +50,12 @@ class App extends Component {
         />
         <ApplicationViews
             user={this.state.user}
+            setUser={this.setUser}
             landlord={this.state.landlord}
             {...this.props}
             activeUser={this.state.activeUser}
         />
-        </div>
-				{this.state.user ? (
+				{/* {this.state.user ? (
 					<>
 
 					</>
@@ -70,7 +69,7 @@ class App extends Component {
 						landlord={this.state.landlord}
 						activeUser={this.state.activeUser}
 					/>
-				)}
+				)} */}
 			</div>
 		);
 	}
