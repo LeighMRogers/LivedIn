@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import Mapper from "../map/Map"
 import BuildingCard from "./BuildingCard";
 
-function BuildingList() {
+function BuildingList(props) {
 
     // state = {
     //     buildings: []
@@ -35,7 +35,7 @@ function BuildingList() {
         <div className="mapWrapper">
             <Mapper props={mapArray}/>
         </div>
-        <BuildingCard/>
+        <BuildingCard {...props}/>
         </>
     )
 }
