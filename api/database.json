@@ -37,7 +37,10 @@
     {
       "id": 1,
       "name": "Germantown Flats",
-      "address": "100 Rosa Parks Ave"
+      "address": "100 Rosa Parks Ave",
+      "userId": 2,
+      "lat": 36.170081,
+      "lng": -86.787324
     }
   ],
   "units": [
@@ -57,13 +60,6 @@
       "recommendation": true,
       "unitId": 1,
       "userId": 1
-    }
-  ],
-  "buildingLandlords": [
-    {
-      "id": 1,
-      "userId": 2,
-      "buildingId": 1
     }
   ]
 }

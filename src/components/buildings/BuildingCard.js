@@ -1,20 +1,20 @@
 import React, { Component } from "react";
-// import BuildingManager from "../../modules/BuildingManager";
+import BuildingManager from "../../modules/BuildingManager";
 
 class BuildingCard extends Component {
 
-    // state = {
-    //     buildingResults: [],
-    //     building: ""
-    // }
+    state = {
+        building: ""
+    }
 
     render() {
+        console.log("building name", this.props.building.name)
 
         return(
 
             <div className="card">
                 <div className="card-content">
-                <h3 className="card-header">Building Card</h3>
+                <h3 className="card-header">{this.props.building.name}</h3>
                 <button type="button"
                     className="btn btn-primary"
                     onClick={() => {this.props.history.push("/building/units")}}>

@@ -13,17 +13,17 @@ export default {
     })
     .then(result => result.json())
   },
-  post(newItinerary) {
+  post(newReview) {
     return fetch(`${remoteURL}/reviews`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(newItinerary)
+        body: JSON.stringify(newReview)
     }).then(data => data.json())
   },
   update( editedReviewId, editedReview) {
-    return fetch(`${remoteURL}/itineraries/${editedReviewId}`, {
+    return fetch(`${remoteURL}/reviews/${editedReviewId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
