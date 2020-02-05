@@ -1,7 +1,7 @@
 # LivedIn: A Rating App for Renters
 
 ### Creator
-Leigh Rogers, Nashville Software School Front-End Capstone
+Leigh Rogers, Nashville Software School UI/UX Capstone
 
 ## Project Overview
 
@@ -59,6 +59,8 @@ The ideal user would be any of the following:
 * Building out a robust UI/UX research and design plan;
 * Coding a CRUD-functionality portion of the app, particularly the add/view/edit/delete a review.
 
+These goals are set against the constraints of time - I had less than 1 week to research users, design, and user test the lo-fi and hi-fi mockups - and only 2 weeks to code ahead of Nashville Software School graduation. I was also learning new APIs and dependencies in the process, such as Leaflet, Mapbox, and Cloudinary.
+
 ### User Goals
 * Provide a functioning app that allows users to create, edit, and delete reviews tied to a specific rental unit, the landlord, and rental building.
 * Allow users to search for reviews based on the building, unit, or landlord.
@@ -87,48 +89,33 @@ Based on my user interviews and research, one type of person who expressed a nee
 
 ![Empathy Map](https://github.com/LeighMRogers/rent-rate/blob/master/public/images/EmpathyMap.jpg)
 
-## Mockups
+## Low Fidelity Mockups
 
 ![LoFi Wireframes](https://github.com/LeighMRogers/rent-rate/blob/master/public/images/LivedInWireframes.jpg)
 
-<!-- ![Capstone Mockup](https://github.com/LeighMRogers/rent-rate/blob/master/public/images/capstoneWireframe2.jpg) -->
+![Capstone Mockup](https://github.com/LeighMRogers/rent-rate/blob/master/public/images/LivedInFigmaViews.png)
 
-## Ideation and Usability Testing
+## Usability Testing
 
-When conceptualizing the app, I wanted to ensure I was creating something that would have a clear purpose and serve a current need. I polled former colleagues at a relief organization and they validated the need for a travel app that builds itineraries with recurringly updated country advisories.
-
-Later, I sent images of lo-fi mockups to them. Their main feedback: Searching for countries was within the context of building itineraries, so having a separate country search was redundant. Upon development, I made sure the calls to action were clear: create itineraries and add countries to them, not the other way around.
+After constructing my lo-fi mockups, usability testing showed me where users expected to add a new review. In earlier paper mockups, an "Add" button asked users to add a review on the landing page, before they would have even searched. Users showed that this was too high up, and they expected to add a review once they found the unit listing, whether by searching on the map or scrolling through the list of buildings.
 
 ## Design system
 
-Safe Trip uses [Reactstrap](https://reactstrap.github.io/) as its design foundations for styling forms, cards, input fields, and buttons. This app purposely does not incorporate too many design elements like icons, illustrations, modals, color palettes, or typefaces because they were not missed during user testing.
+Safe Trip uses [Reactstrap](https://reactstrap.github.io/) as its design foundations for styling forms, cards, input fields, and buttons.
 
 ### Color palette
-The main design color palette consists of Google-like look/feel from Reactstrap: their "Primary" color of blue, light gray, and white. All interactive elements have this color scheme in order to make user interaction as seamless and distractionless as possible.
+An app trying to entice users to contribute content requires a bold, robust color palette. Rich purples and blues and bright green and magenta intend to draw eyes toward calls to action on the screen.
 
-![My Itineraries](https://github.com/LeighMRogers/safe-trip-capstone/blob/master/public/images/SafeTripMyItineraries.png)
+While saturated, the dark and light colors balance each other out against the mostly white background.
 
-![Itinerary Cards](https://github.com/LeighMRogers/safe-trip-capstone/blob/master/public/images/SafeTripItineraryCards.png)
-
-There are some other colors to appear on the app:
-
-A light blue navigation and airplane logo symbolize the blue skies of air travel.
-
-![Safe Trip Landing Page](https://github.com/LeighMRogers/safe-trip-capstone/blob/master/public/images/SafeTripLanding.png)
-
-On country details, country cards are colored based on the advisory score: less than a score of 3 is green, 3 or greater but less than 5 is yellow, and 5 is red. For each color I selected a lightly saturated version so viewing these stark colors is easier on the eye.
-
-![Country Details Green](https://github.com/LeighMRogers/safe-trip-capstone/blob/master/public/images/SafeTripCountryDetailsGreen.png)
-
-![Edit Form](https://github.com/LeighMRogers/safe-trip-capstone/blob/master/public/images/SafeTripEditFormYellow.png)
-
-![Country Details Red](https://github.com/LeighMRogers/safe-trip-capstone/blob/master/public/images/SafeTripCountryDetailsRed.png)
+![LivedIn Color Palette](https://github.com/LeighMRogers/rent-rate/blob/master/public/images/LivedInColorPalette.png)
 
 ### Typography
-The feature font for the logo was [Racing Sans One](https://fonts.google.com/specimen/Racing+Sans+One), and the body font is a basic sans-serif. I used these particular fonts because
+To match the soft curves of the house on the logo, the feature font also is a sans-serif with curved tips and few hard angles. The feature display font on the logo is [Comfortaa](https://fonts.google.com/specimen/Comfortaa), and the body font is  [Montserrat](https://fonts.google.com/specimen/Montserrat), which plays to the spirit of Comfortaa but is more legible in small text.
 
-* Racing Sans One represented a font that was on the move, like a traveler, with its forward-angled italics.
-* A sans-serif font is perfect for readability and legibility, especially smaller text.
+## Lessons Learned
+
+Throughout the UI/UX process, I've learned to never make assumptions about what users want or don't want - let them test and find out. Also, do as many usability tests on different people as you possibly can. It can only help you make a better app.
 
 ### How to Run this App
 
@@ -144,4 +131,4 @@ The feature font for the logo was [Racing Sans One](https://fonts.google.com/spe
 
 Below outlines the relationship between entities in the app:
 
-![Safe Trip App ERD](https://github.com/LeighMRogers/safe-trip-capstone/blob/master/public/images/Front-EndCapstoneUpdated.png "Safe Trip App ERD")
+![LivedIn ERD](https://github.com/LeighMRogers/rent-rate/blob/master/public/images/UI_UXCapstoneERD-Updated.png "LivedIn Capstone ERD")
