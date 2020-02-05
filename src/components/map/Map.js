@@ -10,6 +10,7 @@ export default class Mapper extends Component {
 		zoom: 13
 	};
 	render() {
+
 		const Atoken = `https://api.mapbox.com/styles/v1/leighmrogers/ck60ygd6a06px1ithkcase8tr/wmts?access_token=pk.eyJ1IjoibGVpZ2htcm9nZXJzIiwiYSI6ImNrNjB5ZGJnaTAwOXozZHBwYXhweHM1ZTIifQ.zC19ZazyEY4xiAb-ANz-Xg`;
 		const position = [this.state.lat, this.state.lng];
 		return (

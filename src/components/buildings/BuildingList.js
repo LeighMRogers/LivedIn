@@ -1,43 +1,48 @@
-import React from "react";
-// import BuildingManager from "../../modules/BuildingManager";
-// import BuildingCard from "./BuildingCard";
-import Mapper from "../map/Map"
+import React, { Component} from "react";
+import BuildingManager from "../../modules/BuildingManager";
 import BuildingCard from "./BuildingCard";
+import Mapper from "../map/Map"
 
-function BuildingList(props) {
+class BuildingList extends Component {
 
-    // state = {
-    //     buildings: []
-    // }
+    state = {
+        buildings: []
+    }
 
-    // componentDidMount() {
-    //     this.getData();
-    // }
+    componentDidMount() {
+        this.getData();
+    }
 
-    let mapArray = [
-        {
-          id: 1,
-          name: "Nashville",
-          lat: 36.170081,
-          lng: -86.787324
-        },
-        {
-          id: 2,
-          name: "South Nashville",
-          lat: 36.137647,
-          lng: -86.733079
-        }
-      ]
+    getData = () => {
+      BuildingManager.getAll().then(buildings => {
+        this.setState({
+          buildings: buildings
+        });
+      });
+    };
 
-    return(
+    render() {
+      return(
         <>
         <h1>Building List</h1>
         <div className="mapWrapper">
-            <Mapper props={mapArray}/>
+            <Mapper
+              props={this.state.buildings}
+            />
         </div>
-        <BuildingCard {...props}/>
+        {this.state.buildings.map(building => (
+          <BuildingCard
+            props={this.state.buildings}
+            key={building.id}
+            buildingId={building.id}
+            building={building}
+            {...this.props}
+            getData={this.getData}/>
+        ))}
         </>
-    )
+      )
+
+    }
 }
 
 export default BuildingList;
