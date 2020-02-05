@@ -7,7 +7,6 @@ class Register extends Component {
     // Set initial state
     state = {
       name: "",
-      userName: "",
       password: "",
       email: ""
     };
@@ -35,15 +34,14 @@ class Register extends Component {
         } else {
           let newUser = {
             name: this.state.name,
-            userName: this.state.userName,
             email: this.state.email,
             password: this.state.password
           };
           console.log("new user obj", newUser)
           AuthManager.createUser(newUser)
             .then((createdUser) => {
-              //This determines which page you land on upon registration
               this.props.setUser(createdUser)
+              this.props.history.push("/");
               console.log("created user", createdUser)
             }
             )
@@ -66,11 +64,6 @@ class Register extends Component {
                     type="name"
                     id="name"
                     placeholder="Name"
-                    required="" autoFocus="" />
-                  <input onChange={this.handleFieldChange}
-                    className="form-control"
-                    id="userName"
-                    placeholder="User name"
                     required="" autoFocus="" />
                   <input onChange={this.handleFieldChange}
                     className="form-control"

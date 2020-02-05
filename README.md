@@ -31,7 +31,7 @@ When one searches for a rental unit on common websites like Craigslist, Zillow, 
 
 There are a few smaller websites that are not yet well known that offer rental searches with reviews:
 
-![ApartmentRatings](https://github.com/LeighMRogers/rent-rate/blob/master/public/images/ApartmentRatings.png)
+![ApartmentRatings](https://github.com/LeighMRogers/rent-rate/tree/master/public/images/ApartmentRatings.png)
 
 * ApartmentRatings.com and Apartments.com: These sites are rental search platforms under the same guise as Zillow or but also includes reviews based on the unit and building. They serve as a platform for both tenants and landlords to build greater transparency about rental units. Search functionality is location-based. Their review forms are a very useful model.
 
@@ -101,7 +101,7 @@ After constructing my lo-fi mockups, usability testing showed me where users exp
 
 ## Design system
 
-Safe Trip uses [Reactstrap](https://reactstrap.github.io/) as its design foundations for styling forms, cards, input fields, and buttons.
+LivedIn uses [Reactstrap](https://reactstrap.github.io/) as its design foundation for styling forms, cards, input fields, and buttons.
 
 ### Color palette
 An app trying to entice users to contribute content requires a bold, robust color palette. Rich purples and blues and bright green and magenta intend to draw eyes toward calls to action on the screen.
