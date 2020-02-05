@@ -3,39 +3,52 @@ import NavBar from "./components/nav/NavBar";
 import ApplicationViews from "./components/ApplicationViews";
 import './App.css';
 class App extends Component {
-	state = {
-		user: sessionStorage.getItem('activeUser') !== null,
-		activeUser: '',
-		landlord: ''
-	};
+  state = {
+    user: false,
+    landlord: false
+  }
 
-  isAuthenticated = () => sessionStorage.getItem('activeUser') !== null;
+  // Check if credentials are in session storage
+  //returns true/false
+  isAuthenticated = () => sessionStorage.getItem("credentials") !== null
 
-	setUser = id => {
-		sessionStorage.setItem('activeUser', id);
-		this.setState({ activeUser: this.getUser(), user: true });
-	};
+  getUser = () => {
+    return sessionStorage.getItem("credentials")
+  }
 
-	getUser() {
-		if (sessionStorage.getItem('activeUser')) {
-			return parseInt(sessionStorage.getItem('activeUser'));
-		} else {
-			return '';
-		}
-	}
+  setUser = (authObj) => {
+    /*
+      For now, just store the email and password that
+      the customer enters into local storage.
+    */
+    sessionStorage.setItem(
+      "credentials",
+      JSON.stringify(authObj.id)
+    )
+    this.setState({
+      user: this.isAuthenticated()
+    });
+    console.log("auth object", authObj)
+  }
 
-	adminCheck = (check) => {
+  landlordCheck = (check) => {
 		this.setState({
-			admin: check
+			landlord: check
 		})
 	}
 
-	clearUser = () => {
-		sessionStorage.removeItem('activeUser');
-		this.setState({
-			user: this.isAuthenticated()
-		});
-	};
+  clearUser = () => {
+    sessionStorage.clear()
+    this.setState({
+      user: this.isAuthenticated()
+    });
+  }
+
+  componentDidMount() {
+    this.setState({
+      user: this.isAuthenticated()
+    })
+  }
 
 	render() {
 		return (
@@ -46,7 +59,6 @@ class App extends Component {
             {...this.props}
             activeUser={this.state.activeUser}
             landlord={this.state.landlord}
-            // currentUserId={this.props.activeUser}
         />
         <ApplicationViews
             user={this.state.user}

@@ -37,7 +37,6 @@ class Login extends Component {
                     user.name.toLowerCase() === this.state.name.toLowerCase()) {
                     return user;
                     }
-
                 }
             );
             if (this.state.name === "") {
@@ -46,6 +45,7 @@ class Login extends Component {
                 window.alert("Please enter password")
             } else if (singleUser) {
                 this.props.setUser(singleUser);
+                this.props.history.push("/");
             } else {
                 window.alert("User name and password do not match")
             }
