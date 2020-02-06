@@ -6,7 +6,8 @@ import Mapper from "../map/Map"
 class BuildingList extends Component {
 
     state = {
-        buildings: []
+      // buildingResults: [],
+      buildings: []
     }
 
     componentDidMount() {
@@ -32,7 +33,6 @@ class BuildingList extends Component {
         </div>
         {this.state.buildings.map(building => (
           <BuildingCard
-            props={this.state.buildings}
             key={building.id}
             buildingId={building.id}
             building={building}

@@ -26,14 +26,17 @@ export default class ApplicationViews extends Component {
             return <Register  {...props} getUser={this.props.getUser} setUser={this.props.setUser}/>
             }} />
 
-            <Route exact path="/building/units" render={props => {
-            return <UnitList  {...props} />
+            {/* this route gets specific units for each building */}
+            <Route exact path="/buildings/:buildingId(\d+)" render={props => {
+            return <UnitList buildingId={parseInt(props.match.params.buildingId)} {...props} />
             }} />
 
-            <Route exact path="/building/units/reviews" render={props => {
-            return <ReviewList {...props} />
+            {/* This route gets specific reviews for each unit/building */}
+            <Route exact path="/reviews/:unitId(\d+)" render={props => {
+            return <ReviewList unitId={parseInt(props.match.params.unitId)} {...props} />
             }} />
         </React.Fragment>
       )
     }
 }
+

@@ -18,29 +18,40 @@
       "name": "Leigh",
       "email": "leigh@email.com",
       "password": "pass",
-      "id": 3
+      "id": 3,
+      "landlord": true
     },
     {
       "name": "sammy davis",
       "email": "davis@email.com",
       "password": "davis",
-      "id": 4
+      "id": 4,
+      "landlord": false
     },
     {
       "name": "brenda",
       "email": "brenda@email.com",
       "password": "pass",
-      "id": 5
+      "id": 5,
+      "landlord": false
     }
   ],
   "buildings": [
     {
       "id": 1,
       "name": "Germantown Flats",
-      "address": "100 Rosa Parks Ave",
+      "address": "100 Rosa Parks Blvd.",
       "userId": 2,
       "lat": 36.170081,
       "lng": -86.787324
+    },
+    {
+      "id": 2,
+      "name": "The Pinewood",
+      "address": "433 Shelby Ave.",
+      "userId": 3,
+      "lat": 36.172878,
+      "lng": -86.742740
     }
   ],
   "units": [
@@ -48,18 +59,73 @@
       "id": 1,
       "name": "1A",
       "buildingId": 1
+    },
+    {
+      "id": 2,
+      "name": "1B",
+      "buildingId": 1
+    },
+    {
+      "id": 3,
+      "name": "2A",
+      "buildingId": 1
+    },
+    {
+      "id": 4,
+      "name": "2B",
+      "buildingId": 1
+    },
+    {
+      "id": 5,
+      "name": "3A",
+      "buildingId": 1
+    },
+    {
+      "id": 6,
+      "name": "3B",
+      "buildingId": 1
+    },
+    {
+      "id": 7,
+      "name": "1",
+      "buildingId": 2
+    },
+    {
+      "id": 8,
+      "name": "2",
+      "buildingId": 2
+    },
+    {
+      "id": 9,
+      "name": "3",
+      "buildingId": 2
+    },
+    {
+      "id": 10,
+      "name": "4",
+      "buildingId": 2
     }
   ],
   "reviews": [
     {
       "id": 1,
-      "name": "Nice place",
+      "name": "Loved it",
       "date": "12-24-2019",
-      "description": "It was great",
+      "description": "I had a great experience here - it has been better than the luxury apartment that I lived in before. I can’t say there is anything to complain about.",
       "rating": 5,
       "recommendation": true,
       "unitId": 1,
       "userId": 1
-    }
+    },
+    {
+        "id": 2,
+        "name": "Just OK",
+        "date": "2-24-2020",
+        "description": "meh",
+        "rating": 3,
+        "recommendation": false,
+        "unitId": 1,
+        "userId": 4
+      }
   ]
 }
