@@ -14,7 +14,6 @@ class ReviewList extends Component {
 
     getData = () => {
       UnitManager.getWithReviews(this.props.unitId).then(unit => {
-        console.log("units", unit)
         this.setState({
           reviews: unit.reviews
         });
