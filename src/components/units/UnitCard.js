@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import UnitManager from "../../modules/UnitManager"
+import UnitManager from "../../modules/UnitManager";
+import ReviewManager from "../../modules/ReviewManager";
+import Rating from "react-rating";
 
 class UnitCard extends Component {
 
@@ -33,7 +35,7 @@ class UnitCard extends Component {
     calculateRating = () => {
         if (this.state.reviews.length > 0) {
             let ratingArray = this.state.reviews.map(this.getRating);
-            let ratingTotal = ratingArray.reduce(this.addRatings, 1);
+            let ratingTotal = ratingArray.reduce(this.addRatings, 0);
             // Calculate the average and display.
             let averageRating = ratingTotal / ratingArray.length;
             console.log("rating average", averageRating);
@@ -43,6 +45,17 @@ class UnitCard extends Component {
         }
     }
 
+    // react-rating function and fetch call
+    setCondition = evt => {
+        let reviews = {
+            rating: evt
+        };
+        ReviewManager.patch(
+            "reviews",
+            reviews,
+            this.props.rating.id,
+        ).then(response => response);
+    };
 
     render() {
         return(
@@ -50,6 +63,11 @@ class UnitCard extends Component {
                 <div className="card-content">
                     <h3 className="card-header">{this.props.building.name} {this.props.unit.name}</h3>
                     <p>{this.state.averageRating}</p>
+                    <Rating
+                        id="condition"
+                        initialRating={this.state.reviews.rating}
+                        onClick={evt => this.setCondition(evt)}
+                    />
                     <button type="button"
                             className="btn btn-primary"
                             onClick={() => {this.props.history.push(`/reviews/${this.props.unit.id}`)}}>See Reviews
