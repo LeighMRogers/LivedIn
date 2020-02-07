@@ -22,7 +22,7 @@ export default {
         body: JSON.stringify(newReview)
     }).then(data => data.json())
   },
-  update( editedReviewId, editedReview) {
+  update(editedReviewId, editedReview) {
     return fetch(`${remoteURL}/reviews/${editedReviewId}`, {
       method: "PUT",
       headers: {
@@ -30,5 +30,14 @@ export default {
       },
       body: JSON.stringify(editedReview)
     }).then(data => data.json());
-  }
+  },
+  patch(editedRatingId, editedRating, id) {
+    return fetch(`${remoteURL}/${editedRatingId}/${id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(editedRating)
+    }).then(data => data.json());
+  },
 }

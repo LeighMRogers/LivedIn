@@ -10,17 +10,14 @@ class UnitList extends Component {
     }
 
     componentDidMount() {
-        console.log("reviews", this.state.review)
         this.getData();
     }
 
     getData = () => {
-        console.log(this.state.review);
       BuildingManager.getWithUnits(this.props.buildingId).then(building => {
-        console.log("building", building)
         this.setState({
           units: building.units,
-          building: building,
+          building: building
         });
       });
     };

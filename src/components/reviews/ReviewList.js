@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReviewCard from "../reviews/ReviewCard";
 import UnitManager from "../../modules/UnitManager";
+import { Button } from 'reactstrap';
 
 class ReviewList extends Component {
 
@@ -14,7 +15,6 @@ class ReviewList extends Component {
 
     getData = () => {
       UnitManager.getWithReviews(this.props.unitId).then(unit => {
-        console.log("units", unit)
         this.setState({
           reviews: unit.reviews
         });
@@ -26,6 +26,11 @@ class ReviewList extends Component {
         return(
             <>
             <h3>Review List</h3>
+            <Button type="button"
+                className="btn"
+                onClick={() => {this.props.history.push("/reviews/new")}}>
+                Add a Review
+            </Button>
             {this.state.reviews.map(review => (
                 <ReviewCard
                     key={review.id}
