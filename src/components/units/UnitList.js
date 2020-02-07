@@ -17,7 +17,7 @@ class UnitList extends Component {
       BuildingManager.getWithUnits(this.props.buildingId).then(building => {
         this.setState({
           units: building.units,
-          building: building,
+          building: building
         });
       });
     };

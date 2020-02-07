@@ -5,6 +5,7 @@ import Register from "./auth/Register";
 import BuildingList from "./buildings/BuildingList";
 import UnitList from "./units/UnitList";
 import ReviewList from "./reviews/ReviewList";
+import ReviewAddForm from "./reviews/ReviewAddForm";
 
 export default class ApplicationViews extends Component {
 
@@ -34,6 +35,11 @@ export default class ApplicationViews extends Component {
             {/* This route gets specific reviews for each unit/building */}
             <Route exact path="/reviews/:unitId(\d+)" render={props => {
             return <ReviewList unitId={parseInt(props.match.params.unitId)} {...props} />
+            }} />
+
+            {/* Add Review route */}
+            <Route path="/reviews/new" render={(props) => {
+            return <ReviewAddForm {...props} />
             }} />
         </React.Fragment>
       )
