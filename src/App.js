@@ -67,21 +67,6 @@ class App extends Component {
             {...this.props}
             activeUser={this.state.activeUser}
         />
-				{/* {this.state.user ? (
-					<>
-
-					</>
-				) : (
-					<Login
-						getUser={this.getUser}
-						setUser={this.setUser}
-						user={this.state.user}
-						{...this.props}
-						landlordCheck={this.landlordCheck}
-						landlord={this.state.landlord}
-						activeUser={this.state.activeUser}
-					/>
-				)} */}
 			</div>
 		);
 	}

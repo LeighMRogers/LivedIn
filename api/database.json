@@ -109,7 +109,7 @@
   "reviews": [
     {
       "id": 1,
-      "name": "Loved it",
+      "title": "Loved it",
       "date": "12-24-2019",
       "description": "I had a great experience here - it has been better than the luxury apartment that I lived in before. I can’t say there is anything to complain about.",
       "rating": 5,
@@ -119,7 +119,7 @@
     },
     {
       "id": 2,
-      "name": "Just OK",
+      "title": "Just OK",
       "date": "2-24-2020",
       "description": "meh",
       "rating": 3,

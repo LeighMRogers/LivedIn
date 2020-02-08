@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import ReviewManager from '../../modules/ReviewManager';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import Rating from "react-rating";
 
 const userObj = sessionStorage.getItem("credentials")
 class ReviewAddForm extends Component {
     state = {
-        name: "",
+        title: "",
         date: "",
         description: "",
         rating: "",
-        photo: "",
+        // photo: "",
         recommendation: null,
         userId: "",
         unitId: "",
@@ -18,33 +18,40 @@ class ReviewAddForm extends Component {
     };
 
     handleFieldChange = evt => {
+        console.log(evt.target.value, evt.target.name)
         const stateToChange = {};
+        console.log("state to change", stateToChange)
         stateToChange[evt.target.id] = evt.target.value;
         this.setState(stateToChange);
     };
+
+    handleRadioChange = evt => {
+        const stateToChange = {};
+        console.log("Radio state to change", stateToChange)
+        stateToChange[evt.target.name] = evt.target.value;
+        this.setState(stateToChange);
+    }
+
 
     // react-rating function and fetch call
     setCondition = evt => {
         let reviews = {
             rating: evt
         };
-        ReviewManager.patch(
-            "reviews",
-            reviews,
-            this.state.rating.id,
-        ).then(response => response);
+        console.log("reviews", reviews.rating)
+        this.setState({rating: reviews.rating})
     };
 
     /* Local method for validation, set loadingStatus, create object, invoke the Manager post method, and redirect to the full list
     */
     createNewReview = evt => {
         evt.preventDefault();
-        if (this.state.name === "" || this.state.date === "" || this.state.description === "" || this.state.rating === "" || this.state.recommendation === "") {
+        if (this.state.title === "" || this.state.date === "" || this.state.description === "" || this.state.rating === "" || this.state.recommendation === "") {
             window.alert("Please fill out all fields.");
         } else {
             this.setState({ loadingStatus: true });
             const review = {
-                name: this.state.name,
+                title: this.state.title,
                 date: this.state.date,
                 description: this.state.description,
                 rating: this.state.rating,
@@ -74,7 +81,7 @@ class ReviewAddForm extends Component {
                             type="text"
                             required
                             onChange={this.handleFieldChange}
-                            id="name"
+                            id="title"
                             placeholder="Summarize your experience"
                         />
                         <legend>Rate your experience</legend>
@@ -104,7 +111,7 @@ class ReviewAddForm extends Component {
                                 placeholder="Describe your rental experience"
                             />
                         </div>
-                        <FormGroup>
+                        {/* <FormGroup>
                         <legend>Add a photo</legend>
                             <Input
                                 type="file"
@@ -116,18 +123,27 @@ class ReviewAddForm extends Component {
                             This is some placeholder block-level help text for the above input.
                             It's a bit lighter and easily wraps to a new line.
                             </FormText>
-                        </FormGroup>
-                        <FormGroup tag="fieldset">
-                            <legend>Would you recommend?</legend>
-                            <FormGroup check>
+                        </FormGroup> */}
+                        <FormGroup tag="fieldset" name="recommendation">
+                            <legend>Would you recommend this unit?</legend>
+                            <FormGroup check >
                             <Label check>
-                                <Input type="radio" name="radio1" />{' '}
+                                <Input type="radio"
+                                        name="recommendation"
+                                        value={true}
+                                        onChange={this.handleRadioChange}
+                                        />{' '}
                                 Yes
                             </Label>
                             </FormGroup>
-                            <FormGroup check>
+                            <FormGroup >
                             <Label check>
-                                <Input type="radio" name="radio1" />{' '}
+                                <Input
+                                    type="radio"
+                                    name="recommendation"
+                                    value={false}
+                                    onChange={this.handleRadioChange}
+                                    />{' '}
                                 No
                             </Label>
                             </FormGroup>
@@ -137,7 +153,8 @@ class ReviewAddForm extends Component {
                         <Button
                             className="btn btn-primary"
                             type="button"
-                            onClick={this.addNewReview}>Add Review
+                            onClick={this.addNewReview}
+                            onChange={this.handleFieldChange}>Add Review
                         </Button>
                     </div>
                 </fieldset>
