@@ -2,11 +2,24 @@ import React, { Component } from "react";
 import ReviewCard from "../reviews/ReviewCard";
 import UnitManager from "../../modules/UnitManager";
 import { Button } from 'reactstrap';
+import ReviewManager from "../../modules/ReviewManager"
 
 class ReviewList extends Component {
 
     state = {
         reviews: []
+    }
+
+    deleteReview = id => {
+        ReviewManager.delete(id)
+        .then(() => {
+          ReviewManager.getAll()
+          .then((newReviews) => {
+            this.setState({
+                reviews: newReviews
+            })
+          })
+        })
     }
 
     componentDidMount() {
@@ -26,8 +39,9 @@ class ReviewList extends Component {
         return(
             <>
             <h3>Review List</h3>
-            <Button type="button"
-                className="btn"
+            <Button
+                type="button"
+                className="btn btn-primary"
                 onClick={() => {this.props.history.push(`/reviews/new/${this.props.unitId}`)}}>
                 Add a Review
             </Button>
@@ -36,7 +50,8 @@ class ReviewList extends Component {
                     key={review.id}
                     review={review}
                     {...this.props}
-                    getData={this.getData}/>
+                    getData={this.getData}
+                    deleteReview={this.deleteReview}/>
             ))}
             </>
 
