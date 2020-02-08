@@ -6,6 +6,7 @@ import BuildingList from "./buildings/BuildingList";
 import UnitList from "./units/UnitList";
 import ReviewList from "./reviews/ReviewList";
 import ReviewAddForm from "./reviews/ReviewAddForm";
+import ReviewEditForm from "./reviews/ReviewEditForm";
 
 export default class ApplicationViews extends Component {
 

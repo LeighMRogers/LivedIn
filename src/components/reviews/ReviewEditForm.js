@@ -1,8 +1,10 @@
 import React, { Component } from "react"
-import ReviewManager from "../../modules/ReviewManager"
+import ReviewManager from '../../modules/ReviewManager';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import Rating from "react-rating";
 
 
-class LocationEditForm extends Component {
+class ReviewEditForm extends Component {
     //set the initial state
     state = {
         title: "",
@@ -13,12 +15,31 @@ class LocationEditForm extends Component {
         recommendation: true,
         loadingStatus: false
     };
-
+    
     handleFieldChange = evt => {
-      const stateToChange = {}
-      stateToChange[evt.target.id] = evt.target.value
-      this.setState(stateToChange)
+        console.log(evt.target.value, evt.target.name)
+        const stateToChange = {};
+        console.log("state to change", stateToChange)
+        stateToChange[evt.target.id] = evt.target.value;
+        this.setState(stateToChange);
+    };
+
+    handleRadioChange = evt => {
+        const stateToChange = {};
+        console.log("Radio state to change", stateToChange)
+        stateToChange[evt.target.name] = evt.target.value;
+        this.setState(stateToChange);
     }
+
+
+    // react-rating function and fetch call
+    setCondition = evt => {
+        let reviews = {
+            rating: evt
+        };
+        console.log("reviews", reviews.rating)
+        this.setState({rating: reviews.rating})
+    };
 
     updateReview = evt => {
       evt.preventDefault()
@@ -39,7 +60,7 @@ class LocationEditForm extends Component {
     }
 
     componentDidMount() {
-      ReviewManager.get(this.props.match.params.review.id)
+      ReviewManager.get(this.props.match.params.reviewId)
       .then(review => {
           this.setState({
             // id: this.props.review.id,
@@ -61,7 +82,7 @@ class LocationEditForm extends Component {
             <Form>
                 <fieldset>
                     <div className="formgrid">
-                    <h3>Add a Review</h3>
+                    <h3>Edit Your Review</h3>
                         <Input
                             className="form-control"
                             type="text"
@@ -144,7 +165,7 @@ class LocationEditForm extends Component {
                             className="btn btn-primary"
                             type="button"
                             onClick={this.updateReview}
-                            >Add Review
+                            >Update Review
                         </Button>
                     </div>
                 </fieldset>
