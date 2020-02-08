@@ -11,9 +11,7 @@ class ReviewAddForm extends Component {
         description: "",
         rating: "",
         // photo: "",
-        recommendation: null,
-        userId: "",
-        unitId: "",
+        recommendation: true,
         loadingStatus: false
     };
 
@@ -44,7 +42,7 @@ class ReviewAddForm extends Component {
 
     /* Local method for validation, set loadingStatus, create object, invoke the Manager post method, and redirect to the full list
     */
-    createNewReview = evt => {
+    addNewReview = evt => {
         evt.preventDefault();
         if (this.state.title === "" || this.state.date === "" || this.state.description === "" || this.state.rating === "" || this.state.recommendation === "") {
             window.alert("Please fill out all fields.");
@@ -56,14 +54,14 @@ class ReviewAddForm extends Component {
                 description: this.state.description,
                 rating: this.state.rating,
                 recommendation: this.state.recommendation,
-                userId: parseInt(this.props.user),
-                unitId: parseInt(this.props.unit)
+                userId: parseInt(this.props.getUser()),
+                unitId: parseInt(this.props.unitId)
             };
             console.log("brand new review obj", this.props.user)
 
             // Create the review and redirect user to review list
             ReviewManager.post(review)
-            .then(() => this.props.history.push(`/reviews/${this.props.unit.id}`));
+            .then(() => this.props.history.push(`/reviews/${this.props.unitId}`));
         }
     };
 
@@ -154,7 +152,7 @@ class ReviewAddForm extends Component {
                             className="btn btn-primary"
                             type="button"
                             onClick={this.addNewReview}
-                            onChange={this.handleFieldChange}>Add Review
+                            >Add Review
                         </Button>
                     </div>
                 </fieldset>

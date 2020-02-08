@@ -28,7 +28,7 @@ class ReviewList extends Component {
             <h3>Review List</h3>
             <Button type="button"
                 className="btn"
-                onClick={() => {this.props.history.push("/reviews/new")}}>
+                onClick={() => {this.props.history.push(`/reviews/new/${this.props.unitId}`)}}>
                 Add a Review
             </Button>
             {this.state.reviews.map(review => (

@@ -38,8 +38,8 @@ export default class ApplicationViews extends Component {
             }} />
 
             {/* Add Review route */}
-            <Route path="/reviews/new" render={(props) => {
-            return <ReviewAddForm {...props} />
+            <Route path="/reviews/new/:unitId(\d+)" render={(props) => {
+            return <ReviewAddForm {...props} unitId={parseInt(props.match.params.unitId)} getUser={this.props.getUser}/>
             }} />
         </React.Fragment>
       )

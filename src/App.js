@@ -62,6 +62,7 @@ class App extends Component {
         />
         <ApplicationViews
             user={this.state.user}
+            getUser={this.getUser}
             setUser={this.setUser}
             landlord={this.state.landlord}
             {...this.props}
