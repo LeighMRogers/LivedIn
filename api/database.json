@@ -118,16 +118,6 @@
       "userId": 1
     },
     {
-      "id": 2,
-      "title": "Just OK",
-      "date": "2-24-2020",
-      "description": "meh",
-      "rating": 3,
-      "recommendation": false,
-      "unitId": 1,
-      "userId": 4
-    },
-    {
       "title": "Nice",
       "date": "2020-02-08",
       "description": "place was great.",
