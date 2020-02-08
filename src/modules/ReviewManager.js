@@ -31,13 +31,4 @@ export default {
       body: JSON.stringify(editedReview)
     }).then(data => data.json());
   },
-  patch(editedRating, id) {
-    return fetch(`${remoteURL}/reviews/${id}`, {
-        method: "PATCH",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(editedRating)
-    }).then(data => data.json());
-  },
 }
