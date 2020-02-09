@@ -15,7 +15,7 @@ class ReviewEditForm extends Component {
         recommendation: true,
         loadingStatus: false
     };
-    
+
     handleFieldChange = evt => {
         console.log(evt.target.value, evt.target.name)
         const stateToChange = {};
@@ -45,7 +45,7 @@ class ReviewEditForm extends Component {
       evt.preventDefault()
       this.setState({ loadingStatus: true });
       const editedReview = {
-        // id: this.props.review.id,
+        id: this.props.id,
         title: this.state.title,
         date: this.state.date,
         description: this.state.description,
@@ -56,24 +56,32 @@ class ReviewEditForm extends Component {
       };
 
       ReviewManager.update(editedReview)
+      .then(this.props.getData)
       .then(() => this.props.history.push(`/reviews/${this.props.unitId}`))
     }
 
     componentDidMount() {
-      ReviewManager.get(this.props.match.params.reviewId)
+        console.log("component did mount review ID", this.props.id)
+      ReviewManager.get(this.props.id)
       .then(review => {
           this.setState({
-            // id: this.props.review.id,
-            title: this.state.title,
-            date: this.state.date,
-            description: this.state.description,
-            rating: this.state.rating,
-            recommendation: this.state.recommendation,
-            userId: parseInt(this.props.getUser()),
-            unitId: parseInt(this.props.unitId)
+            title: review.title,
+            date: review.date,
+            description: review.description,
+            rating: review.rating,
+            recommendation: review.recommendation,
+            userId: review.userId,
+            unitId: review.unitId,
+            loadingStatus: false
           });
       });
     }
+
+    handleClick = evt => {
+		evt.preventDefault();
+		this.updateReview();
+		this.setState({ loadingStatus: false });
+	};
 
     render() {
       return (
@@ -141,7 +149,7 @@ class ReviewEditForm extends Component {
                             <Label check>
                                 <Input type="radio"
                                         name="recommendation"
-                                        value={true}
+                                        value={this.state.recommendation}
                                         onChange={this.handleRadioChange}
                                         />{' '}
                                 Yes
@@ -152,7 +160,7 @@ class ReviewEditForm extends Component {
                                 <Input
                                     type="radio"
                                     name="recommendation"
-                                    value={false}
+                                    value={this.state.recommendation}
                                     onChange={this.handleRadioChange}
                                     />{' '}
                                 No
@@ -164,7 +172,7 @@ class ReviewEditForm extends Component {
                         <Button
                             className="btn btn-primary"
                             type="button"
-                            onClick={this.updateReview}
+                            onClick={this.handleClick}
                             >Update Review
                         </Button>
                     </div>
