@@ -12,7 +12,7 @@ class ReviewEditForm extends Component {
         description: "",
         rating: "",
         // photo: "",
-        recommendation: true,
+        recommendation: "true",
         loadingStatus: false
     };
 
@@ -41,28 +41,26 @@ class ReviewEditForm extends Component {
         this.setState({rating: reviews.rating})
     };
 
-    updateReview = evt => {
-      evt.preventDefault()
+    updateReview = () => {
       this.setState({ loadingStatus: true });
       const editedReview = {
-        id: this.props.id,
         title: this.state.title,
         date: this.state.date,
         description: this.state.description,
         rating: this.state.rating,
         recommendation: this.state.recommendation,
-        userId: parseInt(this.props.getUser()),
-        unitId: parseInt(this.props.unitId)
+        userId: parseInt(this.state.userId),
+        unitId: parseInt(this.state.unitId)
       };
 
-      ReviewManager.update(editedReview)
+      ReviewManager.update(this.props.match.params.reviewId, editedReview)
       .then(this.props.getData)
-      .then(() => this.props.history.push(`/reviews/${this.props.unitId}`))
+      .then(() => this.props.history.push(`/reviews/${this.state.unitId}`))
     }
 
     componentDidMount() {
-        console.log("component did mount review ID", this.props.id)
-      ReviewManager.get(this.props.id)
+        console.log("component did mount review ID", this.props)
+      ReviewManager.get(this.props.match.params.reviewId)
       .then(review => {
           this.setState({
             title: review.title,
@@ -149,7 +147,8 @@ class ReviewEditForm extends Component {
                             <Label check>
                                 <Input type="radio"
                                         name="recommendation"
-                                        value={this.state.recommendation}
+                                        value="true"
+                                        checked={this.state.recommendation === "true"}
                                         onChange={this.handleRadioChange}
                                         />{' '}
                                 Yes
@@ -160,7 +159,8 @@ class ReviewEditForm extends Component {
                                 <Input
                                     type="radio"
                                     name="recommendation"
-                                    value={this.state.recommendation}
+                                    value="false"
+                                    checked={this.state.recommendation === "false"}
                                     onChange={this.handleRadioChange}
                                     />{' '}
                                 No

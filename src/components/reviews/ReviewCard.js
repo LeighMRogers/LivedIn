@@ -10,6 +10,7 @@ class ReviewCard extends Component {
     }
 
     render() {
+        console.log("review Id", this.props.review.id)
         return(
 
             <div className="card">

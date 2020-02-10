@@ -108,24 +108,34 @@
   ],
   "reviews": [
     {
-      "id": 1,
       "title": "Loved it",
-      "date": "12-24-2019",
+      "date": "2020-02-10",
       "description": "I had a great experience here - it has been better than the luxury apartment that I lived in before. I can’t say there is anything to complain about.",
       "rating": 5,
-      "recommendation": true,
+      "recommendation": "true",
+      "userId": 1,
       "unitId": 1,
-      "userId": 1
+      "id": 1
     },
     {
       "title": "Nice",
       "date": "2020-02-08",
-      "description": "place was great.",
+      "description": "place was great. Would stay here again. And again.",
       "rating": 4,
       "recommendation": "true",
       "userId": 1,
       "unitId": 1,
       "id": 3
+    },
+    {
+      "title": "Place was horrible",
+      "date": "2020-02-10",
+      "description": "Nasty, landlord didn't fix anything, and tried to evict me.",
+      "rating": 1,
+      "recommendation": "false",
+      "userId": 1,
+      "unitId": 1,
+      "id": 4
     }
   ]
 }
