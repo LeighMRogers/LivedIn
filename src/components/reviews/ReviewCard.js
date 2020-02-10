@@ -10,7 +10,7 @@ class ReviewCard extends Component {
     }
 
     render() {
-
+        console.log("review Id", this.props.review.id)
         return(
 
             <div className="card">
@@ -18,6 +18,7 @@ class ReviewCard extends Component {
                     <h3 className="card-header">{this.props.review.name}</h3>
                     <h4>{this.props.review.rating}</h4>
                     <p>{this.props.review.description}</p>
+                    <Button type="button" onClick={() => {this.props.history.push(`/reviews/edit/${this.props.review.id}`)}}>Edit</Button>
                     <Button type="button" onClick={() => this.handleDelete(this.props.review.id)}>Delete</Button>
                 </div>
             </div>

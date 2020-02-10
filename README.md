@@ -31,11 +31,11 @@ When one searches for a rental unit on common websites like Craigslist, Zillow, 
 
 There are a few smaller websites that are not yet well known that offer rental searches with reviews:
 
-![ApartmentRatings](https://github.com/LeighMRogers/rent-rate/tree/master/public/images/ApartmentRatings.png)
+![ApartmentRatings](https://github.com/LeighMRogers/LivedIn/blob/master/readmeImages/ApartmentRatings.png)
 
 * ApartmentRatings.com and Apartments.com: These sites are rental search platforms under the same guise as Zillow or but also includes reviews based on the unit and building. They serve as a platform for both tenants and landlords to build greater transparency about rental units. Search functionality is location-based. Their review forms are a very useful model.
 
-![WhoseYourLandlord](https://github.com/LeighMRogers/rent-rate/blob/master/public/images/WhoseYourLandlord.png)
+![WhoseYourLandlord](https://github.com/LeighMRogers/LivedIn/blob/master/readmeImages/WhoseYourLandlord.png)
 
 * WhoseYourLandlord.com: A more justice-centric platform, this site organizes units and buildings by location where a user can rate their landlord. The focus on landlords rather than units means it is an equity-building platform rather than a real estate business platform.
 
@@ -43,8 +43,6 @@ Traditional, global rating websites and apps are useful for the purposes of UI i
 
 * Glassdoor: The job and company ratings site offers a model for displaying reviews in an organized and efficient way. By tying reviews to jobs and companies, it matches the relationships of units to buildings.
 * Yelp: The mecca of review sites, the site and app offers appealing UI and inspiration for displaying reviews and other content.
-
-![Capstone Initial Wireframe](https://github.com/LeighMRogers/rent-rate/blob/master/public/images/LivedInWireframes.jpg)
 
 ### Users and Customers
 
@@ -83,17 +81,17 @@ These goals are set against the constraints of time - I had less than 1 week to 
 
 Based on my user interviews and research, one type of person who expressed a need for this app is the "serial renter." These people aren't interested in homeownership (at the moment) because they are cultural nomads interested in traveling and taking advantage of risky but rewarding opportunities. They typically are concentrated in urban environments and work in "creative class" industries like marketing, advertising, and digital publishing. Maggie has the type of personality and life experience suitable for the app: on the move, techy, and confident in her decisions if she has the right tools to help her.
 
-![Safe Trip App Persona Aid Worker](https://github.com/LeighMRogers/rent-rate/blob/master/public/images/RateRentalPersona.png)
+![LivedIn Persona](https://github.com/LeighMRogers/LivedIn/blob/master/readmeImages/RateRentalPersona.png)
 
 ## Empathy Map
 
-![Empathy Map](https://github.com/LeighMRogers/rent-rate/blob/master/public/images/EmpathyMap.jpg)
+![Empathy Map](https://github.com/LeighMRogers/LivedIn/blob/master/readmeImages/Empathy%20Map.jpg)
 
 ## Low Fidelity Mockups
 
-![LoFi Wireframes](https://github.com/LeighMRogers/rent-rate/blob/master/public/images/LivedInWireframes.jpg)
+![LoFi Wireframes](https://github.com/LeighMRogers/LivedIn/blob/master/readmeImages/LivedInWireframes.jpg)
 
-![Capstone Mockup](https://github.com/LeighMRogers/rent-rate/blob/master/public/images/LivedInFigmaViews.png)
+![Capstone Mockup](https://github.com/LeighMRogers/LivedIn/blob/master/readmeImages/LivedInFigmaViews.png)
 
 ## Usability Testing
 
@@ -108,7 +106,7 @@ An app trying to entice users to contribute content requires a bold, robust colo
 
 While saturated, the dark and light colors balance each other out against the mostly white background.
 
-![LivedIn Color Palette](https://github.com/LeighMRogers/rent-rate/blob/master/public/images/LivedInColorPalette.png)
+![LivedIn Color Palette](https://github.com/LeighMRogers/LivedIn/blob/master/readmeImages/LivedInColorPalette.png)
 
 ### Typography
 To match the soft curves of the house on the logo, the feature font also is a sans-serif with curved tips and few hard angles. The feature display font on the logo is [Comfortaa](https://fonts.google.com/specimen/Comfortaa), and the body font is  [Montserrat](https://fonts.google.com/specimen/Montserrat), which plays to the spirit of Comfortaa but is more legible in small text.
@@ -131,4 +129,4 @@ Throughout the UI/UX process, I've learned to never make assumptions about what 
 
 Below outlines the relationship between entities in the app:
 
-![LivedIn ERD](https://github.com/LeighMRogers/rent-rate/blob/master/public/images/UI_UXCapstoneERD-Updated.png "LivedIn Capstone ERD")
+![LivedIn ERD](https://github.com/LeighMRogers/LivedIn/blob/master/readmeImages/UI_UXCapstoneERD-Updated.png "LivedIn Capstone ERD")
