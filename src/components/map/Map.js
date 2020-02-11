@@ -5,8 +5,8 @@ import { Map, TileLayer, Marker, Tooltip } from 'react-leaflet';
 
 export default class Mapper extends Component {
 	state = {
-		lat: 36.1627,
-		lng: -86.7816,
+		lat: 36.1704,
+		lng: -86.7688,
 		zoom: 13
 	};
 	render() {

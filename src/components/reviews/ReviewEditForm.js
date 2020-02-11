@@ -59,7 +59,6 @@ class ReviewEditForm extends Component {
     }
 
     componentDidMount() {
-        console.log("component did mount review ID", this.props)
       ReviewManager.get(this.props.match.params.reviewId)
       .then(review => {
           this.setState({
