@@ -43,7 +43,8 @@
       "address": "100 Rosa Parks Blvd.",
       "userId": 2,
       "lat": 36.170081,
-      "lng": -86.787324
+      "lng": -86.787324,
+      "photo": "brickAptBldg-1080.png"
     },
     {
       "id": 2,
@@ -51,7 +52,8 @@
       "address": "433 Shelby Ave.",
       "userId": 3,
       "lat": 36.172878,
-      "lng": -86.74274
+      "lng": -86.74274,
+      "photo": "BayWindowAptBldg-1080.png"
     },
     {
       "id": 3,
@@ -59,7 +61,8 @@
       "address": "205 Demonbreun St.",
       "userId": 2,
       "lat": 36.159938,
-      "lng": -86.774107
+      "lng": -86.774107,
+      "photo": "SoBroApts-1080.png"
     },
     {
       "id": 4,
@@ -67,7 +70,8 @@
       "address": "1200 Broadway",
       "userId": 3,
       "lat": 36.156445,
-      "lng": -86.788171
+      "lng": -86.788171,
+      "photo": "modernBuilding-1080.png"
     },
     {
       "id": 5,
@@ -75,7 +79,8 @@
       "address": "901 2nd Ave N",
       "userId": 3,
       "lat": 36.172976,
-      "lng": -86.781989
+      "lng": -86.781989,
+      "photo": "BWApts-1080.png"
     }
   ],
   "units": [

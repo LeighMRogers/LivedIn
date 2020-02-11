@@ -13,6 +13,7 @@ class BuildingCard extends Component {
             <div className="card">
                 <div className="card-content">
                 <h3 className="card-header">{this.props.building.name}</h3>
+                <img src={`/images/${this.props.building.photo}`}></img>
                 <p>{this.props.building.address}</p>
                 <button type="button"
                     className="btn btn-primary"
