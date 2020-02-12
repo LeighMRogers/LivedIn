@@ -38,7 +38,7 @@ class UnitCard extends Component {
             let averageRating = ratingTotal / ratingArray.length;
             console.log("rating average", averageRating);
             this.setState({
-                averageRating: averageRating
+                averageRating: averageRating.toFixed(1)
             })
         }
     }
@@ -47,13 +47,18 @@ class UnitCard extends Component {
         return(
             <div className="card">
                 <div className="card-content">
-                    <h3 className="card-header">
-                     {this.props.unit.name}</h3>
-                    <h4>Average Rating: {this.state.averageRating}</h4>
-                    <button type="button"
-                            className="btn btn-primary"
-                            onClick={() => {this.props.history.push(`/reviews/${this.props.unit.id}`)}}>See Reviews
-                    </button>
+                    <div className="unitCard-h3">
+                        <h3>{this.props.unit.name}</h3>
+                    </div>
+                    <div className="unitCard-rating">
+                        <h4>Rating: {this.state.averageRating}</h4>
+                    </div>
+                    <div className="unitCard-button">
+                        <button type="button"
+                                className="btn btn-primary"
+                                onClick={() => {this.props.history.push(`/reviews/${this.props.unit.id}`)}}>See Reviews
+                        </button>
+                    </div>
                 </div>
             </div>
         )
