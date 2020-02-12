@@ -79,3 +79,42 @@ h1, h2{
 	min-width: 200px;
 }
 
+.list-header {
+	display: flex;
+	flex-direction: row;
+	margin: .5em;
+}
+
+.list-header h3{
+	padding: .25em;
+}
+
+.unit-photo {
+	width: 12em;
+	padding: .5em;
+}
+
+.unitCard-h3 {
+	padding: .75em;
+	margin: 0;
+}
+
+.unitCard-rating {
+	padding: .75em;
+	margin: 0;
+}
+
+.unitCard-button {
+	padding: 1em;
+	right: .01em;
+    position: absolute;
+    min-width: 150px;
+}
+
+.unitCard-button button {
+	background-color: #c7ed7e;
+    border: none;
+    color: #002659;
+    text-transform: uppercase;
+    font-weight: 700;
+}
