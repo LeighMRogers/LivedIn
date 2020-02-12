@@ -14,8 +14,8 @@ class NavBar extends Component {
         return (
             <>
             <Nav className="navbar navbar-expand-lg">
-                <ul>
-                    <li><Link className="navbar-brand" to="/">LivedIn</Link></li>
+                    <Link className="navbar-brand" to="/">LivedIn</Link>
+                    <img src="/images/home.svg" alt="LivedIn, a rating app for renters"></img>
                     {(this.props.user) ?
                     <li><span className="nav-link" onClick={this.handleLogout}>Logout</span></li>
                     :
@@ -23,7 +23,6 @@ class NavBar extends Component {
                         <li><Link className="nav-link" to="/login">Login</Link></li>
                         <li><Link className="nav-link" to="/register">Register</Link></li>
                     </> }
-                </ul>
             </Nav>
             </>
         )

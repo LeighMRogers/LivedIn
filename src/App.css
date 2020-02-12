@@ -1,22 +1,9 @@
 .App {
-	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #FFFCF9;
+	width: 100%;
 }
-.App-logo {
-	height: 40vmin;
-}
-.App-header {
-	background-color: #282c34;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: white;
-}
-.App-link {
-	color: #09d3ac;
-}
+
 /* .mapWrapper {
 	height: 800px;
 	width: 800px;
@@ -31,18 +18,64 @@
 	width: 500px;
 	overflow: hidden;
 }
-.control-panel {
-	position: absolute;
-	top: 0;
-	right: 0;
-	max-width: 320px;
-	background: #fff;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-	padding: 12px 24px;
-	margin: 20px;
-	font-size: 13px;
-	line-height: 2;
-	color: #6b6b76;
-	text-transform: uppercase;
-	outline: none;
+
+.navbar {
+	background-color: #776EBA !important;
+	color: #E9E9E9;
+	/* display: flex;
+  	flex-direction: row;
+  	justify-content: space-between; */
+	width: 100%;
 }
+.navbar-brand {
+	color: #E9E9E9;
+	font-family: 'Comfortaa', cursive;
+}
+.navbar img{
+	height: 2.5em;
+}
+
+h1, h2{
+	padding: .5em;
+}
+
+.building-photo img {
+	width: 10em;
+	padding: .5em;
+}
+
+.card {
+	margin: 1em;
+	box-shadow: 2px 2px 4px #00275945;
+}
+
+.card-content {
+	display: flex;
+	flex-direction: row;
+}
+
+.card-text {
+	padding: .5em;
+	min-width: 215px;
+}
+
+.card-text button{
+	background-color: #c7ed7e;
+	border: none;
+	color: #002659;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.card-text p {
+	margin-bottom: .5em;
+}
+
+.card-button {
+	display: flex;
+	justify-content: flex-end;
+	bottom: .5em;
+	position: absolute;
+	min-width: 200px;
+}
+

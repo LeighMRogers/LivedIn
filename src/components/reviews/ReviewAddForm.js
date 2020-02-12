@@ -16,16 +16,13 @@ class ReviewAddForm extends Component {
     };
 
     handleFieldChange = evt => {
-        console.log(evt.target.value, evt.target.name)
         const stateToChange = {};
-        console.log("state to change", stateToChange)
         stateToChange[evt.target.id] = evt.target.value;
         this.setState(stateToChange);
     };
 
     handleRadioChange = evt => {
         const stateToChange = {};
-        console.log("Radio state to change", stateToChange)
         stateToChange[evt.target.name] = evt.target.value;
         this.setState(stateToChange);
     }
@@ -36,7 +33,6 @@ class ReviewAddForm extends Component {
         let reviews = {
             rating: evt
         };
-        console.log("reviews", reviews.rating)
         this.setState({rating: reviews.rating})
     };
 

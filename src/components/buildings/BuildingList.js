@@ -25,7 +25,7 @@ class BuildingList extends Component {
     render() {
       return(
         <>
-        <h1>Building List</h1>
+        <h1>Welcome to LivedIn! Rate your rental.</h1>
         <div className="mapWrapper">
             <Mapper
               props={this.state.buildings}

@@ -43,7 +43,8 @@
       "address": "100 Rosa Parks Blvd.",
       "userId": 2,
       "lat": 36.170081,
-      "lng": -86.787324
+      "lng": -86.787324,
+      "photo": "brickAptBldg-1080.png"
     },
     {
       "id": 2,
@@ -51,7 +52,35 @@
       "address": "433 Shelby Ave.",
       "userId": 3,
       "lat": 36.172878,
-      "lng": -86.74274
+      "lng": -86.74274,
+      "photo": "BayWindowAptBldg-1080.png"
+    },
+    {
+      "id": 3,
+      "name": "The SoBro",
+      "address": "205 Demonbreun St.",
+      "userId": 2,
+      "lat": 36.159938,
+      "lng": -86.774107,
+      "photo": "SoBroApts-1080.png"
+    },
+    {
+      "id": 4,
+      "name": "Music City Apartments",
+      "address": "1200 Broadway",
+      "userId": 3,
+      "lat": 36.156445,
+      "lng": -86.788171,
+      "photo": "modernBuilding-1080.png"
+    },
+    {
+      "id": 5,
+      "name": "The Nashville Stockyards",
+      "address": "901 2nd Ave N",
+      "userId": 3,
+      "lat": 36.172976,
+      "lng": -86.781989,
+      "photo": "BWApts-1080.png"
     }
   ],
   "units": [
@@ -104,6 +133,41 @@
       "id": 10,
       "name": "4",
       "buildingId": 2
+    },
+    {
+      "id": 11,
+      "name": "100",
+      "buildingId": 3
+    },
+    {
+      "id": 12,
+      "name": "200",
+      "buildingId": 3
+    },
+    {
+      "id": 13,
+      "name": "300",
+      "buildingId": 3
+    },
+    {
+      "id": 14,
+      "name": "Unit 101",
+      "buildingId": 4
+    },
+    {
+      "id": 15,
+      "name": "Unit 102",
+      "buildingId": 4
+    },
+    {
+      "id": 16,
+      "name": "Unit 103",
+      "buildingId": 4
+    },
+    {
+      "id": 17,
+      "name": "Unit 104",
+      "buildingId": 4
     }
   ],
   "reviews": [
@@ -136,6 +200,106 @@
       "userId": 1,
       "unitId": 1,
       "id": 4
+    },
+    {
+      "title": "Decent rate reasonably close to town",
+      "date": "2020-02-05",
+      "description": "I moved in because they have a pretty good rate and I can get into town quickly without using the interstate. Unfortunately, they don't really keep their apartments up very well and there are aspects of my unit that seem outdated.",
+      "rating": 3,
+      "recommendation": "true",
+      "userId": 1,
+      "unitId": 2,
+      "id": 5
+    },
+    {
+      "title": "Awful place!",
+      "date": "2020-02-06",
+      "description": "Expensive place to live, lound neighbours, plenty of bugs and cockroaches, mold on the walls, smelly hallways. Their website for payments is confusing so it's a huge chance they will charge you extra the first month there. Also if you want to break the lease early they charge a full extra month and also at least 300 dollars extra for ... for cleaning!? Even though the place was left spotless! Their gym is a joke, their pool is mostly dirty and also the swimming season for them it's probably for 2 months or less! Customer service sucks too, they never tell anything, you always have to insist for information. Anyways... don't necessarily take my word for it ... Go there and see for yourself or do yourself a favor and avoid this place!",
+      "rating": 1,
+      "recommendation": "false",
+      "userId": 1,
+      "unitId": 2,
+      "id": 6
+    },
+    {
+      "title": "Good for the Price",
+      "date": "2020-02-10",
+      "description": "At the moment I write this, this complex is under heavy renovation. That does mean that units will have problems, and it will be time from whence reported, to whence completed. However, So far, all issues are fixed. I made a post before they fixed the issues so I'm rewriting it now. In that post I was frustrated since I had no notice of the time frame of completion.",
+      "rating": 3,
+      "recommendation": "false",
+      "userId": 1,
+      "unitId": 3,
+      "id": 7
+    },
+    {
+      "title": "Solid place to live!",
+      "date": "2020-02-10",
+      "description": "Overall the apartments are beautiful and the building and amenities run well. Don’t live by the pool if you’re not used to a dorm type environment, but they are getting it under control. The new manager, Jessica, is AWESOME and the staff overall gets you what you need.",
+      "rating": 5,
+      "recommendation": "true",
+      "userId": 1,
+      "unitId": 4,
+      "id": 8
+    },
+    {
+      "title": "Work done within an hour...",
+      "date": "2020-02-16",
+      "description": "Within an hour and a half of submitting my requests, the work was done.",
+      "rating": 4,
+      "recommendation": "true",
+      "userId": 1,
+      "unitId": 4,
+      "id": 9
+    },
+    {
+      "title": "Expensive",
+      "date": "2020-02-03",
+      "description": "I would recommend these apartments to others if they can afford the rent",
+      "rating": 4,
+      "recommendation": "true",
+      "userId": 1,
+      "unitId": 5,
+      "id": 10
+    },
+    {
+      "title": "Great Community Spaces, Terrible for Noise",
+      "date": "2020-02-04",
+      "description": "Community spaces are fantastic and a great feature as your friends will be constantly hitting you up to hang. I hear literally everything (FOOTSTEPS, talking, music, pee streams and also “bedroom activities”) from the people who live above me. I’ve lived in a lot of apartments over the years (ones much cheaper than this) and never heard neighboring noise on this level.  ",
+      "rating": 3,
+      "recommendation": "false",
+      "userId": 1,
+      "unitId": 5,
+      "id": 11
+    },
+    {
+      "title": "Great Amenities",
+      "date": "2020-02-05",
+      "description": "Great amenities, great value for the location and the accommodations, Security was a big plus!",
+      "rating": 5,
+      "recommendation": "true",
+      "userId": 1,
+      "unitId": 6,
+      "id": 12
+    },
+    {
+      "title": "Great location, but that's it",
+      "date": "2020-02-21",
+      "description": "The location is great, common areas are awesome. The apartment has some nice features, but some things are not up to the standard we’d hope for. ",
+      "rating": 3,
+      "recommendation": "false",
+      "userId": 1,
+      "unitId": 7,
+      "id": 13
+    },
+    {
+      "title": "Great place to live",
+      "date": "2020-02-12",
+      "description": "It is a great place to live in a great location. It is a very walkable neighborhood and a short walk to other neighborhoods that you wouldn't get in other areas.",
+      "rating": 4,
+      "recommendation": "true",
+      "userId": 1,
+      "unitId": 8,
+      "id": 14
     }
   ]
 }
