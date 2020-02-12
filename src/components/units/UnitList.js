@@ -26,6 +26,7 @@ class UnitList extends Component {
         return(
             <>
             <h3>Unit List</h3>
+            <img src={`/images/${this.state.building.photo}`}></img>
             {this.state.units.map(unit => (
                 <UnitCard
                     key={unit.id}
