@@ -47,7 +47,7 @@ class UnitCard extends Component {
         return(
             <div className="card">
                 <div className="card-content">
-                    <h3 className="card-header">{this.props.building.name}
+                    <h3 className="card-header">
                      {this.props.unit.name}</h3>
                     <h4>Average Rating: {this.state.averageRating}</h4>
                     <button type="button"
