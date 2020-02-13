@@ -79,12 +79,12 @@ class ReviewAddForm extends Component {
                             placeholder="Summarize your experience"
                         />
                         <div className="review-rating">
-                        <legend>Your rating</legend>
-                        <Rating
-                            id="condition"
-                            initialRating={this.state.rating}
-                            onClick={evt => this.setCondition(evt)}
-                        />
+                            <legend>Your rating</legend>
+                            <Rating
+                                id="condition"
+                                initialRating={this.state.rating}
+                                onClick={evt => this.setCondition(evt)}
+                            />
                         </div>
                         <div className="review-date">
                             <legend>Enter today's date</legend>
