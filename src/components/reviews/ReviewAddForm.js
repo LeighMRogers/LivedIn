@@ -101,7 +101,7 @@ class ReviewAddForm extends Component {
                             <legend>Describe your experience</legend>
                             <Input
                                 className="form-control"
-                                type="text"
+                                type="textarea"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="description"

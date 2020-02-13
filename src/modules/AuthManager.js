@@ -1,6 +1,6 @@
 // This is the page that will call the API calls for the authentication
 
-const remoteURL = 'http://localhost:8088';
+const remoteURL = 'http://localhost:5002';
 
 export default {
     createUser(user) {
