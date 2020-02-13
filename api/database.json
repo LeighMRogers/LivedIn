@@ -176,7 +176,7 @@
       "date": "2020-02-10",
       "description": "I had a great experience here - it has been better than the luxury apartment that I lived in before. I can’t say there is anything to complain about.",
       "rating": 5,
-      "recommendation": "true",
+      "recommendation": "false",
       "userId": 1,
       "unitId": 1,
       "id": 1
@@ -300,6 +300,16 @@
       "userId": 1,
       "unitId": 8,
       "id": 14
+    },
+    {
+      "title": "It was awesome",
+      "date": "2020-02-13",
+      "description": "Will gladly pass on this place to friends.",
+      "rating": 4,
+      "recommendation": "true",
+      "userId": 1,
+      "unitId": 1,
+      "id": 15
     }
   ]
 }
