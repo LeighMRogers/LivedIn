@@ -97,7 +97,7 @@ class ReviewEditForm extends Component {
                             value={this.state.title}
                             placeholder="Summarize your experience"
                         />
-                        <legend>Rate your experience</legend>
+                        <legend>Your rating</legend>
                         <Rating
                             id="condition"
                             initialRating={this.state.rating}

@@ -51,7 +51,7 @@ class UnitCard extends Component {
                         <h3>{this.props.unit.name}</h3>
                     </div>
                     <div className="unitCard-rating">
-                        <h4>Rating: {this.state.averageRating}</h4>
+                        <h4>{this.state.averageRating} stars</h4>
                     </div>
                     <div className="unitCard-button">
                         <button type="button"

@@ -8,7 +8,7 @@ export default {
     return fetch(`${remoteURL}/units`).then(result => result.json())
   },
   getWithReviews(id) {
-    return fetch(`${remoteURL}/units/${id}?_embed=reviews`)
+    return fetch(`${remoteURL}/units/${id}?_embed=reviews&_expand=building`)
             .then(result => result.json())
   }
 }

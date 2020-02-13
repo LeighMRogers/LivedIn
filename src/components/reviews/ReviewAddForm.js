@@ -78,14 +78,16 @@ class ReviewAddForm extends Component {
                             id="title"
                             placeholder="Summarize your experience"
                         />
-                        <legend>Rate your experience</legend>
+                        <div className="review-rating">
+                        <legend>Your rating</legend>
                         <Rating
                             id="condition"
                             initialRating={this.state.rating}
                             onClick={evt => this.setCondition(evt)}
                         />
-                        <legend>Enter today's date</legend>
+                        </div>
                         <div className="review-date">
+                            <legend>Enter today's date</legend>
                             <Input
                                 className="form-control"
                                 type="date"
@@ -96,13 +98,13 @@ class ReviewAddForm extends Component {
                             />
                         </div>
                         <div className="review-description">
+                            <legend>Describe your experience</legend>
                             <Input
                                 className="form-control"
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="description"
-                                placeholder="Describe your rental experience"
                             />
                         </div>
                         {/* <FormGroup>
@@ -118,32 +120,32 @@ class ReviewAddForm extends Component {
                             It's a bit lighter and easily wraps to a new line.
                             </FormText>
                         </FormGroup> */}
-                        <FormGroup tag="fieldset" name="recommendation">
+                        <FormGroup tag="fieldset" name="recommendation" className="recommendContainer">
                             <legend>Would you recommend this unit?</legend>
-                            <FormGroup check >
-                            <Label check>
-                                <Input type="radio"
+                            <FormGroup check>
+                                <Label check className="recommendLabel">
+                                    <Input type="radio"
+                                            name="recommendation"
+                                            value={true}
+                                            onChange={this.handleRadioChange}
+                                            />{' '}
+                                    Yes
+                                </Label>
+                            </FormGroup>
+                            <FormGroup check>
+                                <Label check className="recommendLabel">
+                                    <Input
+                                        type="radio"
                                         name="recommendation"
-                                        value={true}
+                                        value={false}
                                         onChange={this.handleRadioChange}
                                         />{' '}
-                                Yes
-                            </Label>
-                            </FormGroup>
-                            <FormGroup >
-                            <Label check>
-                                <Input
-                                    type="radio"
-                                    name="recommendation"
-                                    value={false}
-                                    onChange={this.handleRadioChange}
-                                    />{' '}
-                                No
-                            </Label>
+                                    No
+                                </Label>
                             </FormGroup>
                         </FormGroup>
                     </div>
-                    <div className="alignRight">
+                    <div className="addReview-button">
                         <Button
                             className="btn btn-primary"
                             type="button"
