@@ -79,7 +79,7 @@ class ReviewAddForm extends Component {
                             placeholder="Summarize your experience"
                         />
                         <div className="review-rating">
-                        <legend>Rate your experience</legend>
+                        <legend>Your rating</legend>
                         <Rating
                             id="condition"
                             initialRating={this.state.rating}
@@ -122,30 +122,30 @@ class ReviewAddForm extends Component {
                         </FormGroup> */}
                         <FormGroup tag="fieldset" name="recommendation" className="recommendContainer">
                             <legend>Would you recommend this unit?</legend>
-                            <FormGroup check >
-                            <Label check>
-                                <Input type="radio"
+                            <FormGroup check>
+                                <Label check className="recommendLabel">
+                                    <Input type="radio"
+                                            name="recommendation"
+                                            value={true}
+                                            onChange={this.handleRadioChange}
+                                            />{' '}
+                                    Yes
+                                </Label>
+                            </FormGroup>
+                            <FormGroup check>
+                                <Label check className="recommendLabel">
+                                    <Input
+                                        type="radio"
                                         name="recommendation"
-                                        value={true}
+                                        value={false}
                                         onChange={this.handleRadioChange}
                                         />{' '}
-                                Yes
-                            </Label>
-                            </FormGroup>
-                            <FormGroup >
-                            <Label check>
-                                <Input
-                                    type="radio"
-                                    name="recommendation"
-                                    value={false}
-                                    onChange={this.handleRadioChange}
-                                    />{' '}
-                                No
-                            </Label>
+                                    No
+                                </Label>
                             </FormGroup>
                         </FormGroup>
                     </div>
-                    <div className="alignRight">
+                    <div className="addReview-button">
                         <Button
                             className="btn btn-primary"
                             type="button"

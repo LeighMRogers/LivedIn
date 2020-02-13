@@ -179,6 +179,7 @@ h1, h2{
 
 .form-group {
 	padding: 1em;
+	margin: 0;
 }
 
 .formgrid h3{
@@ -188,6 +189,10 @@ h1, h2{
 .review-rating, .review-date {
 	margin-top: 2em;
 }
+
+/* #condition {
+	height: 2em;
+} */
 
 .review-description {
 	margin: 2em 0;
@@ -201,6 +206,36 @@ h1, h2{
 .recommendContainer {
 	padding: 0;
 }
+
+.recommendLabel {
+	padding: 1.2em;
+	font-size: 1.2em;
+}
+
+input[type="radio"] {
+    -ms-transform: scale(2); /* IE 9 */
+    -webkit-transform: scale(2); /* Chrome, Safari, Opera */
+	transform: scale(2);
+}
+
+input {
+	font-size: 1.5em;
+}
+
+.addReview-button {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.addReview-button button{
+	background-color: #ff91a0;
+    border: none;
+    color: #002659;
+    text-transform: uppercase;
+	font-weight: 700;
+	padding: .75em 1.5em;
+}
+
 
 
 
