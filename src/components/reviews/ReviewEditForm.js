@@ -97,15 +97,17 @@ class ReviewEditForm extends Component {
                             value={this.state.title}
                             placeholder="Summarize your experience"
                         />
-                        <legend>Your rating</legend>
-                        <Rating
-                            id="condition"
-                            initialRating={this.state.rating}
-                            value={this.state.rating}
-                            onClick={evt => this.setCondition(evt)}
-                        />
-                        <legend>Enter today's date</legend>
+                        <div className="review-rating">
+                            <legend>Your rating</legend>
+                            <Rating
+                                id="condition"
+                                initialRating={this.state.rating}
+                                value={this.state.rating}
+                                onClick={evt => this.setCondition(evt)}
+                            />
+                        </div>
                         <div className="review-date">
+                            <legend>Enter today's date</legend>
                             <Input
                                 className="form-control"
                                 type="date"
@@ -117,6 +119,7 @@ class ReviewEditForm extends Component {
                             />
                         </div>
                         <div className="review-description">
+                            <legend>Describe your experience</legend>
                             <Input
                                 className="form-control"
                                 type="text"
@@ -140,10 +143,10 @@ class ReviewEditForm extends Component {
                             It's a bit lighter and easily wraps to a new line.
                             </FormText>
                         </FormGroup> */}
-                        <FormGroup tag="fieldset" name="recommendation">
+                        <FormGroup tag="fieldset" name="recommendation" className="recommendContainer">
                             <legend>Would you recommend this unit?</legend>
                             <FormGroup check >
-                            <Label check>
+                            <Label className="recommendLabel" check>
                                 <Input type="radio"
                                         name="recommendation"
                                         value="true"
@@ -153,8 +156,8 @@ class ReviewEditForm extends Component {
                                 Yes
                             </Label>
                             </FormGroup>
-                            <FormGroup >
-                            <Label check>
+                            <FormGroup check>
+                            <Label className="recommendLabel" check>
                                 <Input
                                     type="radio"
                                     name="recommendation"
@@ -167,7 +170,7 @@ class ReviewEditForm extends Component {
                             </FormGroup>
                         </FormGroup>
                     </div>
-                    <div className="alignRight">
+                    <div className="addReview-button">
                         <Button
                             className="btn btn-primary"
                             type="button"
