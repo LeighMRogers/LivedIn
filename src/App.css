@@ -118,3 +118,91 @@ h1, h2{
     text-transform: uppercase;
     font-weight: 700;
 }
+
+.review-header {
+	margin: 1em;
+}
+
+.review-header button {
+	background-color: #ff91a0;
+    border: none;
+    color: #002659;
+    text-transform: uppercase;
+	font-weight: 700;
+	padding: 1em;
+	margin: .5em;
+}
+
+#review-card {
+	margin: 1em;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px #00275945;
+	border: .4px inset #00275945;
+}
+
+#review-card-top {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: .5em;
+}
+
+#review-card-top h3 {
+	font-weight: 700;
+}
+
+.review-description{
+	padding: 0 .5em;
+	font-size: 1.15em;
+}
+
+#review-card-bottom {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: .5em;
+}
+
+#review-card-bottom p {
+	align-self: flex-end;
+}
+
+.review-card-buttons button{
+	background-color: #c7ed7e;
+    border: none;
+    color: #002659;
+    text-transform: uppercase;
+	font-weight: 700;
+	padding: .75em 1.5em;
+	margin: 0 0 0 2em;
+}
+
+.form-group {
+	padding: 1em;
+}
+
+.formgrid h3{
+	margin-bottom: 1em;
+}
+
+.review-rating, .review-date {
+	margin-top: 2em;
+}
+
+.review-description {
+	margin: 2em 0;
+	padding: 0;
+}
+
+.review-description input {
+	height: 8em;
+}
+
+.recommendContainer {
+	padding: 0;
+}
+
+
+
+
+
